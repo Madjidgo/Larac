@@ -6,7 +6,7 @@
 
 The body of your message.
 
-@component('mail::button', ['url' => 'htts//madjidgo@gmail.com', 'color' => 'green'])
+@component('mail::button', ['url' => 'madjidgo@gmail.com', 'color' => 'green'])
 Button Text
 @endcomponent
 
