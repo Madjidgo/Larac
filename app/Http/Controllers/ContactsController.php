@@ -22,8 +22,8 @@ class ContactsController extends Controller
     		$request->email,
     		$request->message);
 
-            
-    Mail::to(config('laracarte.mail'))->send($mailable);
+
+    Mail::to(config('laracarte.mail'))->queue($mailable);
     		 
          Flashy::message('Good Job', 'http://your-awesome-link.com');
 
