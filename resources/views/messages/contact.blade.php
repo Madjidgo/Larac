@@ -8,7 +8,7 @@
         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
             <h2>Get In Touch</h2>
 
-            <p><span class="text-muted">If you having trouble with this service, please <a href="mailto:your-account@helpful.io" data-helpful="laracarte" data-helpful-modal="on">ask for help</a>.</span></p>
+            <p><span class="text-muted">If you having trouble with this service, please <a href="mailto:{{config('laracarte.mail')}}" data-helpful="laracarte" data-helpful-modal="on">ask for help</a>.</span></p>
 
             <form method="POST" action="{{route('store')}}">
                 
@@ -23,7 +23,7 @@
 
                 <div class="form-group has-error {{$errors->has('email') ? 'has-error': ''}}">
                     <label class="control-label" for="email">Email</label>
-                    <input type="email" name="email" value="" class="form-control" value="{{ old('email') }}" required="email">
+                    <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" required="email">
                     {!!  $errors->first('email', '<span class="help-block ">:message</span>') !!}
 
 
